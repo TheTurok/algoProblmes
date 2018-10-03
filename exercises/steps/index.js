@@ -17,6 +17,37 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+// function steps(n) {
+//   if(n <= 0)
+//     throw new Error('Number is not positive!');
+//
+//   const poundArray = new Array(n).fill(' ');
+//
+//   for(var i = 0; i < n; i++){
+//       poundArray[i] = '#';
+//       console.log(poundArray.join(''));
+//   }
+// }
+
+function steps(n, row = 0,stair = ''){
+  if(n === row)
+    return;
+
+
+  if(n === stair.length){
+    console.log(stair);
+    return steps(n,row + 1);
+  }
+
+  if(stair.length <= row){
+    stair += '#';
+  }
+  else {
+    stair += ' ';
+  }
+
+  steps(n,row,stair);
+}
+
 
 module.exports = steps;
