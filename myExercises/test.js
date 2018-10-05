@@ -2,14 +2,19 @@ const numToEng = require('./numtoeng');
 const removeInvalid = require('./removeInvalid');
 const oscillatingTreeTraversal = require('./oscillatingTreeTraversal');
 const mergeMeetingTimes = require('./mergeMeetingTimes');
+const meshMessageRouting = require('./meshMessageRouting');
 
-var mt =  [
-  { startTime: 1,  endTime: 2 },
-  { startTime: 3,  endTime: 5 },
-  { startTime: 4,  endTime: 8 },
-  { startTime: 10, endTime: 12 },
-  { startTime: 9,  endTime: 10 },
-]
-;
+var network = {
+    'Min'     : ['William', 'Jayden', 'Omar'],
+    'William' : ['Min', 'Noam'],
+    'Jayden'  : ['Min', 'Amelia', 'Ren', 'Noam'],
+    'Ren'     : ['Jayden', 'Omar'],
+    'Amelia'  : ['Jayden', 'Adam', 'Miguel'],
+    'Adam'    : ['Amelia', 'Miguel', 'Sofia', 'Lucas'],
+    'Miguel'  : ['Amelia', 'Adam', 'Liam', 'Nathan'],
+    'Noam'    : ['Nathan', 'Jayden', 'William'],
+    'Omar'    : ['Ren', 'Min', 'Scott'],
+};
 
-console.log(mergeMeetingTimes(mt));
+
+console.log(meshMessageRouting(network, 'Jayden', 'Adam'));
