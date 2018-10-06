@@ -16,5 +16,12 @@ var network = {
     'Omar'    : ['Ren', 'Min', 'Scott'],
 };
 
+var network2 = {
+  'Jayden'  : ['Min', 'Amelia', 'Ren', 'Noam'],
+  'Amelia'  : ['Jayden', 'Omar', 'Miguel'],
+  'Omar'    : ['Ren', 'Adam', 'Scott'],
+  'Adam' : ['Jayden']
+}
+
 
 console.log(meshMessageRouting(network, 'Jayden', 'Adam'));

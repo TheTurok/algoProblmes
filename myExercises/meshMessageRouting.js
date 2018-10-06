@@ -2,6 +2,9 @@ function meshMessageRouting(network, start, end){
   if(!network[start] || !network[end])
     throw new Error('Start and End route in network is required!');
 
+  if(start === end)
+    return [start];
+
   const networkVisited = {[start] : ''};
 
   const route = []; //finalized routes
@@ -9,8 +12,8 @@ function meshMessageRouting(network, start, end){
 
   let found = false; //see if route was found
 
-  loop: while(stack.length !== 0){ //while queue is not empty
-    let node = stack.shift();
+  loop: for(var i = 0; i < stack.length; i++){ //while queue is not empty
+    let node = stack[i];
 
     if(!network[node]){ //if it is iteratable
       continue;
