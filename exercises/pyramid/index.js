@@ -14,7 +14,7 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n , row = 0, stacks = '#') {
+function pyramid2(n , row = 0, stacks = '#') {
   if(n === row)
     return;
 
@@ -33,6 +33,18 @@ function pyramid(n , row = 0, stacks = '#') {
     }
 
     return pyramid(n, row, stacks);
+
+}
+
+function pyramid(n){
+  const stacks = new Array(n + (n-1)).fill(' ');
+
+  for(let i = 0; i < n ; i++){
+    stacks[ Math.floor(stacks.length /2 ) + i] = '#';
+    stacks[ Math.floor(stacks.length /2 ) - i] = '#';
+    console.log(stacks.join(''));
+  }
+
 
 }
 
