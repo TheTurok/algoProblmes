@@ -13,7 +13,7 @@ function palindrome(str) {
 
   str.split(' ').join();
 
-  for( i = 0; i < str.length/1; i++){
+  for( i = 0; i < str.length/2; i++){
     if(str.charAt(i) != str.charAt(str.length - 1 - i))
       return false;
   }
