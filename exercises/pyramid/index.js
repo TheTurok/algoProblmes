@@ -44,8 +44,6 @@ function pyramid(n){
     stacks[ Math.floor(stacks.length /2 ) - i] = '#';
     console.log(stacks.join(''));
   }
-
-
 }
 
 module.exports = pyramid;
