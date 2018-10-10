@@ -11,4 +11,15 @@ function vowels(str) {
   return str.replace(/[^aeiouAEIOU]/g, '').length;
 }
 
+function vowels2(str) {
+  let count = 0;
+  const checker = ['a','e','i','o','i'];
+
+  for(let char of str.toLowerCase()){
+    if(checker.includes(char)){
+      count++;
+    }
+  }
+  return count;
+}
 module.exports = vowels;
