@@ -39,15 +39,12 @@ class Node {
     if(data > this.data){
       if(this.right)
         return this.right.contains(data);
-      else
-        return null;
     }
     else{
       if(this.left)
         return this.left.contains(data);
-      else
-        return null;
     }
+    return null;
   }
 
 }
