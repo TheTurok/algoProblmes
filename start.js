@@ -3,7 +3,7 @@ function setup(){
 
   lis.forEach(node => {
     node.addEventListener('click', function(e){
-      document.querySelector('ul').prepend(this);
+      lis[0].parentNode.prepend(this);
     });
   });
 }
